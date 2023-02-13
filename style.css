@@ -1,9 +1,9 @@
-img #dog-image {
+ img.dog-image {
     display : block;
-    height: 50px;
-    width: 50px;
+    height: 200px;
+    width: 200px;
     border-radius : 50%;
     float: left;
-    object-fit: cover;
-
+    object-fit: scale-down;
+    overflow: hidden;
 }
