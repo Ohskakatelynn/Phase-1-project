@@ -30,7 +30,11 @@ function addNewQ (){
 }
 
 const yesButton = document.getElementById("yes-button")
-yesButton.addEventListener("click", console.log("hi"))
+yesButton.addEventListener("click", ()=> {
+    console.log("hi")
+    addNewQ()
+    addSubmitBtn()
+})
 function addSubmitBtn() {
     document.getElementById('questions-1').style.display = 'none'
     let submitBtn = document.createElement("button")
@@ -38,6 +42,7 @@ function addSubmitBtn() {
     submitBtn.innerText = "Submit"
     submitBtn.addEventListener("click", () =>{
     console.log("Submit")
+    
   })
 }
 
