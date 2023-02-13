@@ -1,1 +1,65 @@
-
+{
+  "dogs": [
+    {
+      "name": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": 2,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": 3,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": 4,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": 5,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": 6,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": 7,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": 8,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": 9,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": 10,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
