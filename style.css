@@ -1,3 +1,26 @@
+* {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+ 
+body {
+	background-color: #F6F9FD;
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+#title{
+	background-color: #FE9E16;
+	color: #040404; 
+	height: 150px;
+	padding-top: 85px;
+	border-bottom: solid 0.25vh #E6E4E4;
+
+}
+
+ 
  img.dog-image {
     display : block;
     height: 200px;
