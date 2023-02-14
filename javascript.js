@@ -4,23 +4,32 @@ fetch ( "http://localhost:3000/dogs" )
     
 
 const dogDiv = document.getElementById("dog-image")
-const submitButton = document.createElement("button")
+let submitBtn = document.createElement("button")
 // function renderPage(dogs){
 //      dogs.forEach(dog => )
 //     }
+  
 
-function addNewQ (){
-    let form1Div = document.createElement("div")
+  function renderForm(){
+  let form1Div = document.createElement("div")
   form1Div.className = "form-group"
   form1Div.id = "form-1"
   const form1 = document.createElement("form")
+  form1.id = '1st-form'
   form1.innerHTML = `
     <h1> New Question</h1><br>
      <form>
       <input type="radio" name="choice" value="yes"> Yes
      <input type="radio" name="choice" value="no"> No
     </form>
-  `
+    `
+  }
+
+
+
+
+function addNewQ (){
+
   form1Div.append(form1);
   const body = document.getElementsByTagName("body")[0]
   body.append(form1Div)
@@ -36,15 +45,25 @@ yesButton.addEventListener("click", ()=> {
     addSubmitBtn()
 })
 function addSubmitBtn() {
+    let form = document.getElementById("1st-form")
     document.getElementById('questions-1').style.display = 'none'
-    let submitBtn = document.createElement("button")
+    // let submitBtn = document.createElement("button")
     submitBtn.id = "submit1"
     submitBtn.innerText = "Submit"
-    submitBtn.addEventListener("click", () =>{
-    console.log("Submit")
+    submitBtn.type = "submit"
+    submitBtn.form = "1st-form"
+    form.append(submitBtn)
     
-  })
-}
+    submitBtn.addEventListener("click", addNewQ)
+    
+  }
+  
+  // function onSubmitClick(){
+   
+    
+    
+  // }
+
 
 
 //   const input02 = document.createElement("input")
@@ -59,9 +78,6 @@ function addSubmitBtn() {
 
 
 
-let submit1 = document.querySelector("#submit1")
-console.log(submit1)
 
-const noButton = document.getElementById("no-button")
 
  
