@@ -1,9 +1,12 @@
 let showForm = false
 const yesButton = document.getElementById("yes-button")
 const question = document.getElementById("questionH2")
+const dogDiv = document.querySelector("#dog-div")
+
+
 yesButton.addEventListener("click", ()=> {
     const surveyDiv = document.getElementById("survey-div")
-    console.log("hi")
+    
     showForm = !showForm
     if(showForm) {
       formDiv.style.display = "block"
@@ -13,27 +16,49 @@ yesButton.addEventListener("click", ()=> {
     }
 })
 
-
+let ourDogs = []
 fetch ( "http://localhost:3000/dogs" )
     .then ( r=> r.json() )
-    .then (data => console.log(data))
-  
+    .then (dogData => {
+      let dogArray = [...dogData]
+      ourDogs.push(dogArray)
+      // getBigDogs(dogArray)
+    })
+  console.log(ourDogs)
     
 const formDiv = document.querySelector("#form-div")
-const dogDiv = document.getElementById("dog-image")
 const questionForm = document.querySelector("#question-form")
 questionForm.addEventListener("submit", (e) => {
   e.preventDefault()
-  console.log(e.target.choice.value)
   
   if (e.target.choice.value == "yes") {
     console.log( "big dogs" )
+    getBigDogs(ourDogs)
+
   } else if (e.target.choice.value == "no"){
     console.log( "small dogs" )
   } 
 })
 
+function getDogs(dogs){
+  dogs.forEach(dog => {
+    let imgAndBreed = document.createElement("div");
+    imgAndBreed.id = dog.id
+    let dogImg = document.createElement("img")
+    dogImg.src = dog.image
+    dogImg.className = "dog-image"
+    let breedName = document.createElement("p")
+    breedName.innerText = dog.breed
+    dogDiv.append(imgAndBreed)
+    imgAndBreed.append(breedName, dogImg)
+  })
+}
 
+function getBigDogs(dogs) {
+  // const bigDogs = dogs.filter(() => {})
+    console.log(dogs)
+  // console.log(bigDogs)
+}
  
 
 
