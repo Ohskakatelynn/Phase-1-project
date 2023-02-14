@@ -2,10 +2,12 @@ let showForm = false
 const yesButton = document.getElementById("yes-button")
 const question = document.getElementById("questionH2")
 yesButton.addEventListener("click", ()=> {
+    const surveyDiv = document.getElementById("survey-div")
     console.log("hi")
     showForm = !showForm
     if(showForm) {
       formDiv.style.display = "block"
+      surveyDiv.style.display = "none"
     }else {
       formDiv.style.display = "none"
     }
@@ -24,14 +26,15 @@ questionForm.addEventListener("submit", (e) => {
   e.preventDefault()
   console.log(e.target.choice.value)
   
-  if (e.target.choice.value = yes) {
+  if (e.target.choice.value == "yes") {
     console.log( "big dogs" )
-  } else { 
+  } else if (e.target.choice.value == "no"){
     console.log( "small dogs" )
-
-  }
-  
+  } 
 })
+
+
+ 
 
 
   
