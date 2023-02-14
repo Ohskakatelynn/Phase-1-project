@@ -1,6 +1,7 @@
 {
   "dogs": [
     {
+      "question1" : "Do you want a big dog?",
       "breed": "Husky",
       "energy level": "5/5",
       "price": "4/5",
