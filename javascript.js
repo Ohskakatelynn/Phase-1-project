@@ -55,6 +55,9 @@ function getDogs(dogs){
     let dogImg = document.createElement("img")
     dogImg.src = dog.image
     dogImg.className = "dog-image"
+    dogImg.addEventListener("mouseover", () => {
+      alert("Give dog pets")
+    })
     let breedName = document.createElement("p")
     breedName.innerText = dog.breed
     dogDiv.append(imgAndBreed)

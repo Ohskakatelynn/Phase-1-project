@@ -34,3 +34,10 @@ div#form-div {
     display: none;
 }
 
+button {
+    cursor: pointer
+}
+
+input {
+    cursor: pointer;
+}
