@@ -1,13 +1,14 @@
-* {
+/* * {
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 }
- 
+  */
 body {
 	background-color: #F6F9FD;
 }
 
 h1{
+    text-align: center;
     font-size: 2.5em;
 }
 
@@ -25,13 +26,37 @@ h1{
     height: 200px;
     width: 200px;
     border-radius : 50%;
-    float: left;
+    position:inline;
+    float :left;
     object-fit: scale-down;
     overflow: hidden;
 }
 
+p {
+    text-align: left;
+}
+
+
+div.big{
+    display: inline-block;
+    margin-left: 25%;
+    margin-right: auto;
+    position:relative;
+
+}
+
+div.small{
+    display: inline-block;
+    margin-left: 25%;
+    margin-right: auto;
+    position:relative; 
+}
+
 div#form-div {
     display: none;
+    position : absolute;
+    bottom: 350px;
+    right : 750px;
 }
 
 button {

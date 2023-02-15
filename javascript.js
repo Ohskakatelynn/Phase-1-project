@@ -49,8 +49,8 @@ function getDogs(dogs){
     imgAndBreed.id = dog.id
     if(dog.size === 4){
       imgAndBreed.className = "big"
-    } else if (dog.size < 3){
-      imgAndBreed.className = "small"
+    } else if (dog.size < 4){
+      imgAndBreed.className = "not-big"
     }
     let dogImg = document.createElement("img")
     dogImg.src = dog.image
@@ -89,7 +89,7 @@ function getBigDogs() {
     fetch("http://localhost:3000/dogs")
     .then(response => response.json())
     .then(data =>{
-      const smallDogs = data.filter(dog => dog.size < 3)
+      const smallDogs = data.filter(dog => dog.size < 4)
       // console.log(smallDogs)
       getDogs(smallDogs)
       let showBigDogs = true
