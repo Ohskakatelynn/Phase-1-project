@@ -27,14 +27,17 @@ questionForm.addEventListener("submit", (e) => {
   console.log(e.target.choice.value)
   
   if (e.target.choice.value == "yes") {
-    console.log( "big dogs" )
+    renderBigDogs()
   } else if (e.target.choice.value == "no"){
     console.log( "small dogs" )
   } 
 })
 
 
- 
+
+ function renderBigDogs(dogs) {
+   
+ }
 
 
   
