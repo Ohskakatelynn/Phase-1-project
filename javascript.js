@@ -1,5 +1,6 @@
 let showForm = false
 const yesButton = document.getElementById("yes-button")
+
 const question = document.getElementById("questionH2")
 const dogDiv = document.querySelector("#dog-div")
 
@@ -24,7 +25,7 @@ fetch ( "http://localhost:3000/dogs" )
       ourDogs.push(dogArray)
       // getBigDogs(dogArray)
     })
-  console.log(ourDogs)
+  
     
 const formDiv = document.querySelector("#form-div")
 const questionForm = document.querySelector("#question-form")
@@ -37,6 +38,8 @@ questionForm.addEventListener("submit", (e) => {
 
   } else if (e.target.choice.value == "no"){
     console.log( "small dogs" )
+    getSmallDogs()
+
   } 
 })
 
@@ -44,6 +47,11 @@ function getDogs(dogs){
   dogs.forEach(dog => {
     let imgAndBreed = document.createElement("div");
     imgAndBreed.id = dog.id
+    if(dog.size === 4){
+      imgAndBreed.className = "big"
+    } else if (dog.size < 3){
+      imgAndBreed.className = "small"
+    }
     let dogImg = document.createElement("img")
     dogImg.src = dog.image
     dogImg.className = "dog-image"
@@ -54,6 +62,7 @@ function getDogs(dogs){
   })
 }
 
+
 function getBigDogs() {
   fetch("http://localhost:3000/dogs")
   .then(response => response.json())
@@ -61,18 +70,40 @@ function getBigDogs() {
     const largeDogs = data.filter(dog => dog.size === 4)
     console.log(largeDogs)
     getDogs(largeDogs)
+    let showBigDogs = true
+    if (showBigDogs) {
+      const smallDogs = document.querySelectorAll(".small")
+      for (let i = 0; i < smallDogs.length; i++) {
+        smallDogs[i].style.display = "none";
+      }
+      console.log([smallDogs])
+    }
+    
   })
  
 }
+ function getSmallDogs(){
+    fetch("http://localhost:3000/dogs")
+    .then(response => response.json())
+    .then(data =>{
+      const smallDogs = data.filter(dog => dog.size < 3)
+      // console.log(smallDogs)
+      getDogs(smallDogs)
+      let showBigDogs = true
+    if (showBigDogs) {
+      const bigDogs = document.querySelectorAll(".big")
+      for (let i = 0; i < bigDogs.length; i++) {
+        bigDogs[i].style.display = "none";
+      }
+      
+    }
+      
+  })
+
+ }
  
 
-// fetch('path/to/your/json/file.json')
-//   .then(response => response.json())
-//   .then(data => {
-//     const peopleByHeight = data.filter(person => person.height === 175); // replace 175 with the height you want to fetch
-//     console.log(peopleByHeight); // this will log an array of people with height 175
-//   })
-//   .catch(error => console.error(error));
+
   
 
 

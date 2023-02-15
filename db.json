@@ -1,6 +1,7 @@
 {
   "dogs": [
     {
+      "id": 1,
       "breed": "Husky",
       "energy level": 5,
       "price": 4,
@@ -11,6 +12,7 @@
       "image": "https://breedadvisor.com/wp-content/uploads/2020/02/SIBERIAN-HUSKY-PORTRAIT.jpg"
     },
     {
+      "id": 2,
       "breed": "German Shepherd",
       "energy level": 5,
       "price": 4,
@@ -21,6 +23,7 @@
       "image": "https://th.bing.com/th/id/OIP.Bk2sCUiLRhGb77LfA90N2wHaEo?w=308&h=192&c=7&r=0&o=5&pid=1.7"
     },
     {
+      "id": 3,
       "breed": "Chihuahua",
       "energy level": 5,
       "price": 1,
@@ -31,6 +34,7 @@
       "image": "https://th.bing.com/th/id/OIP.VPXXLmDPafan_QCNVPGzKgAAAA?w=123&h=185&c=7&r=0&o=5&pid=1.7"
     },
     {
+      "id": 4,
       "breed": "Golden Retriever",
       "energy level": 3,
       "price": 3,
@@ -41,6 +45,7 @@
       "image": "https://th.bing.com/th/id/OIP.xwPljN7zAmSu2EMphHN-qgHaHa?w=188&h=188&c=7&r=0&o=5&pid=1.7"
     },
     {
+      "id": 5,
       "breed": "Bulldog",
       "energy level": 2,
       "price": 3,
@@ -51,6 +56,7 @@
       "image": "https://th.bing.com/th/id/OIP.YF1VEGqBkK_hr-tC6e4sZwHaE7?w=270&h=180&c=7&r=0&o=5&pid=1.7"
     },
     {
+      "id": 6,
       "breed": "Poodle",
       "energy level": 4,
       "price": 3,
@@ -61,6 +67,7 @@
       "image": "https://th.bing.com/th/id/OIP.9XzH4IwmRssHhd_d3riVIQHaIk?w=150&h=180&c=7&r=0&o=5&pid=1.7"
     },
     {
+      "id": 7,
       "breed": "Beagle",
       "energy-level": 4,
       "price": 3,
@@ -71,6 +78,7 @@
       "image": "https://th.bing.com/th/id/OIP.heldT27pSIEU23YkqPNhgwHaFW?w=215&h=180&c=7&r=0&o=5&pid=1.7"
     },
     {
+      "id": 8,
       "breed": "Dachshund",
       "energy-level": 3,
       "price": 3,
@@ -81,6 +89,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSarHIuw9buAnlTqxJu-ew0ghZvIyVdpH1EUg&usqp=CAU"
     },
     {
+      "id": 9,
       "breed": "Pomeranian",
       "energy-level": 3,
       "price": 3,
@@ -91,6 +100,7 @@
       "image": "https://cdn.fotofits.com/petzlover/gallery/img/l/pomeranian-620397.jpg"
     },
     {
+      "id": 10,
       "breed": "Shiba Inu",
       "energy-level": 3,
       "price": 4,
