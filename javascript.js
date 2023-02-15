@@ -23,7 +23,6 @@ fetch ( "http://localhost:3000/dogs" )
     .then (dogData => {
       let dogArray = [...dogData]
       ourDogs.push(dogArray)
-      // getBigDogs(dogArray)
     })
   
     
@@ -33,12 +32,10 @@ questionForm.addEventListener("submit", (e) => {
   e.preventDefault()
   
   if (e.target.choice.value == "yes") {
-    console.log( "big dogs" )
     getBigDogs()
 
   } else if (e.target.choice.value == "no"){
-    console.log( "small dogs" )
-    getSmallDogs()
+    getNotBigDogs()
 
   } 
 })
@@ -71,27 +68,24 @@ function getBigDogs() {
   .then(response => response.json())
   .then(data =>{
     const largeDogs = data.filter(dog => dog.size === 4)
-    console.log(largeDogs)
     getDogs(largeDogs)
     let showBigDogs = true
     if (showBigDogs) {
-      const smallDogs = document.querySelectorAll(".small")
-      for (let i = 0; i < smallDogs.length; i++) {
-        smallDogs[i].style.display = "none";
+      const notBigDogs = document.querySelectorAll(".not-big")
+      for (let i = 0; i < notBigDogs.length; i++) {
+        notBigDogs[i].style.display = "none";
       }
-      console.log([smallDogs])
     }
     
   })
  
 }
- function getSmallDogs(){
+ function getNotBigDogs(){
     fetch("http://localhost:3000/dogs")
     .then(response => response.json())
     .then(data =>{
-      const smallDogs = data.filter(dog => dog.size < 4)
-      // console.log(smallDogs)
-      getDogs(smallDogs)
+      const notBigDogs = data.filter(dog => dog.size < 4)
+      getDogs(notBigDogs)
       let showBigDogs = true
     if (showBigDogs) {
       const bigDogs = document.querySelectorAll(".big")

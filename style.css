@@ -45,18 +45,20 @@ div.big{
 
 }
 
-div.small{
+div.not-big{
     display: inline-block;
-    margin-left: 25%;
-    margin-right: auto;
-    position:relative; 
+    width: 150px;
+    padding: 75px;
+    padding-top: 0px;
+    
 }
 
 div#form-div {
     display: none;
     position : absolute;
-    bottom: 350px;
-    right : 750px;
+    bottom: 300px;
+    right : 850px;
+
 }
 
 button {
@@ -66,3 +68,24 @@ button {
 input {
     cursor: pointer;
 }
+
+button#yes-button {
+    position : absolute;
+    bottom: 300px;
+    right : 950px;
+    width: 15%;
+    height: 15%;
+    font-size: 150%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button#no-button {
+    position : absolute;
+    bottom: 300px;
+    right : 650px;
+    width: 15%;
+    height: 15%;
+    font-size: 150%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
