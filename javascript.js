@@ -33,7 +33,7 @@ questionForm.addEventListener("submit", (e) => {
   
   if (e.target.choice.value == "yes") {
     console.log( "big dogs" )
-    getBigDogs(ourDogs)
+    getBigDogs()
 
   } else if (e.target.choice.value == "no"){
     console.log( "small dogs" )
@@ -54,14 +54,25 @@ function getDogs(dogs){
   })
 }
 
-function getBigDogs(dogs) {
-  // const bigDogs = dogs.filter(() => {})
-    console.log(dogs)
-  // console.log(bigDogs)
+function getBigDogs() {
+  fetch("http://localhost:3000/dogs")
+  .then(response => response.json())
+  .then(data =>{
+    const largeDogs = data.filter(dog => dog.size === 4)
+    console.log(largeDogs)
+    getDogs(largeDogs)
+  })
+ 
 }
  
 
-
+// fetch('path/to/your/json/file.json')
+//   .then(response => response.json())
+//   .then(data => {
+//     const peopleByHeight = data.filter(person => person.height === 175); // replace 175 with the height you want to fetch
+//     console.log(peopleByHeight); // this will log an array of people with height 175
+//   })
+//   .catch(error => console.error(error));
   
 
 
