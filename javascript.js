@@ -25,7 +25,6 @@ fetch ( "http://localhost:3000/dogs" )
       ourDogs.push(dogArray)
     })
   
-    
 const formDiv = document.querySelector("#form-div")
 const questionForm = document.querySelector("#question-form")
 questionForm.addEventListener("submit", (e) => {
@@ -33,11 +32,10 @@ questionForm.addEventListener("submit", (e) => {
   
   if (e.target.choice.value == "yes") {
     getBigDogs()
-
   } else if (e.target.choice.value == "no"){
     getNotBigDogs()
-
   } 
+  formDiv.style.display= "none"
 })
 
 function getDogs(dogs){
@@ -52,6 +50,7 @@ function getDogs(dogs){
     let dogImg = document.createElement("img")
     dogImg.src = dog.image
     dogImg.className = "dog-image"
+    
     dogImg.addEventListener("mouseover", () => {
       alert("Give dog pets")
     })
@@ -59,6 +58,20 @@ function getDogs(dogs){
     breedName.innerText = dog.breed
     dogDiv.append(imgAndBreed)
     imgAndBreed.append(breedName, dogImg)
+
+    
+    breedName.addEventListener("click", () => {
+      const list = document.getElementById("ul")
+      const itemsOnList = document.createElement("li")
+      list.append(itemsOnList)
+      itemsOnList.innerText = dog["energy-level"]
+      itemsOnList.innerText = dog.price
+      itemsOnList.innerText = dog.friendly
+      itemsOnList.innerText = dog.sheds
+      itemsOnList.innerText = dog.sassy
+      breedName.append(list)
+
+    })
   })
 }
 
@@ -76,9 +89,7 @@ function getBigDogs() {
         notBigDogs[i].style.display = "none";
       }
     }
-    
   })
- 
 }
  function getNotBigDogs(){
     fetch("http://localhost:3000/dogs")
@@ -92,11 +103,8 @@ function getBigDogs() {
       for (let i = 0; i < bigDogs.length; i++) {
         bigDogs[i].style.display = "none";
       }
-      
     }
-      
   })
-
  }
  
 
