@@ -72,7 +72,7 @@ div.not-big{
 
 div#form-div {
     display: none;
-    position : absolute;
+    position : center;
     text-align: center;
     bottom: 500px;
     right : 700px;
