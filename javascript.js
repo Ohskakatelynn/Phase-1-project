@@ -1,12 +1,11 @@
 let showForm = false
 const yesButton = document.getElementById("yes-button")
-
+const noButton = document.getElementById("no-button")
 const question = document.getElementById("questionH2")
 const dogDiv = document.querySelector("#dog-div")
 
-
-yesButton.addEventListener("click", ()=> {
-    const surveyDiv = document.getElementById("survey-div")
+function showTheForm(){
+  const surveyDiv = document.getElementById("survey-div")
     
     showForm = !showForm
     if(showForm) {
@@ -15,6 +14,13 @@ yesButton.addEventListener("click", ()=> {
     }else {
       formDiv.style.display = "none"
     }
+}
+yesButton.addEventListener("click", ()=> {
+    showTheForm()
+})
+noButton.addEventListener("click", ()=> {
+  alert("Too Bad")
+  showTheForm()
 })
 
 let ourDogs = []
@@ -29,7 +35,7 @@ const formDiv = document.querySelector("#form-div")
 const questionForm = document.querySelector("#question-form")
 questionForm.addEventListener("submit", (e) => {
   e.preventDefault()
-  
+  dogDiv.innerHTML = ""
   if (e.target.choice.value == "yes") {
     getBigDogs()
   } else if (e.target.choice.value == "no"){
@@ -48,10 +54,10 @@ function getDogs(dogs){
     } else if (dog.size < 4){
       imgAndBreed.className = "not-big"
     }
+
     let dogImg = document.createElement("img")
     dogImg.src = dog.image
     dogImg.className = "dog-image"
-    
     dogImg.addEventListener("mouseover", () => {
       dogDiv.append(dogDetail)
     })
@@ -59,15 +65,13 @@ function getDogs(dogs){
     dogImg.addEventListener("mouseout", () => {
       dogDetail.remove()
     })
-    let breedName = document.createElement("p")
+
+    let breedName = document.createElement("h2")
     breedName.innerText = dog.breed
     dogDiv.append(imgAndBreed)
     imgAndBreed.append(breedName, dogImg)
-
     })
   }
-
-
 
 function getBigDogs() {
   fetch("http://localhost:3000/dogs")
@@ -99,13 +103,3 @@ function getBigDogs() {
     }
   })
  }
- 
-
-
-  
-
-
-
-
-
- 
