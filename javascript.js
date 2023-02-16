@@ -50,44 +50,30 @@ function getDogs(dogs){
     let dogImg = document.createElement("img")
     dogImg.src = dog.image
     dogImg.className = "dog-image"
+    
+    dogImg.addEventListener("mouseover", () => {
+      alert("Give dog pets")
+    })
     let breedName = document.createElement("p")
     breedName.innerText = dog.breed
     dogDiv.append(imgAndBreed)
     imgAndBreed.append(breedName, dogImg)
 
-    dogImg.addEventListener("click", () => {
+    
+    breedName.addEventListener("click", () => {
       const list = document.getElementById("ul")
       const itemsOnList = document.createElement("li")
+      list.append(itemsOnList)
       itemsOnList.innerText = dog["energy-level"]
       itemsOnList.innerText = dog.price
       itemsOnList.innerText = dog.friendly
       itemsOnList.innerText = dog.sheds
       itemsOnList.innerText = dog.sassy
-      list.append(itemsOnList)
-      dogImg.appendChild(list)
-    
-    // dogImg.addEventListener("mouseover", () => {
-    //   alert("Give dog pets")
-    // })
-    // let breedName = document.createElement("p")
-    // breedName.innerText = dog.breed
-    // dogDiv.append(imgAndBreed)
-    // imgAndBreed.append(breedName, dogImg)
+      breedName.append(list)
 
-    // breedName.addEventListener("click", () => {
-    //   const list = document.getElementById("ul")
-    //   const itemsOnList = document.createElement("li")
-    //   itemsOnList.innerText = dog["energy-level"]
-    //   itemsOnList.innerText = dog.price
-    //   itemsOnList.innerText = dog.friendly
-    //   itemsOnList.innerText = dog.sheds
-    //   itemsOnList.innerText = dog.sassy
-    //   list.append(itemsOnList)
-    //   breedName.append(list)
-    //   })
     })
-  }
-  )}
+  })
+}
 
 
 function getBigDogs() {
@@ -120,11 +106,3 @@ function getBigDogs() {
     }
   })
  }
- 
-  
-
-
-
-
-
- 
