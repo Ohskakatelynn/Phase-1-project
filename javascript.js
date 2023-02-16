@@ -47,6 +47,7 @@ function getDogs(dogs){
   dogs.forEach(dog => {
     let imgAndBreed = document.createElement("div");
     let dogDetail = document.createElement("p");
+    dogDetail.className = "dogDetail";
     dogDetail.innerHTML = dog.description;
     imgAndBreed.id = dog.id
     if(dog.size === 4){

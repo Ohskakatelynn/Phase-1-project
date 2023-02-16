@@ -4,20 +4,26 @@
 }
   */
 body {
-	background-color: #F6F9FD;
+	background-image:gradient(gray,white)
 }
 
 h1{
+    position: relative;
     text-align: center;
     font-size: 2.5em;
+    
 }
+
+
 
 #title{
 	background-color: #FE9E16;
 	color: #040404; 
-	height: 150px;
-	padding-top: 85px;
-	border-bottom: solid 0.25vh #E6E4E4;
+	height: 100px;
+	padding-top: 80px;
+    border-radius: 40px;
+    margin-top: auto;
+	/* border-bottom: solid 0.25vh #E6E4E4; */
 
 }
 
@@ -32,8 +38,15 @@ h1{
     overflow: hidden;
 }
 
-p {
-    text-align: left;
+p.dogDetail {
+    display: inline-block;
+    position : absolute;
+    text-align: center;
+    bottom: 300px;
+    right : 750px;
+    left: 750px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
 
@@ -47,17 +60,23 @@ div.big{
 
 div.not-big{
     display: inline-block;
+    margin-left: 25%;
+    margin-right: auto;
+    position:relative;
+    /* display: inline-block;
     width: 150px;
     padding: 75px;
-    padding-top: 0px;
+    padding-top: 0px; */
     
 }
 
 div#form-div {
     display: none;
     position : absolute;
-    bottom: 300px;
-    right : 850px;
+    text-align: center;
+    bottom: 500px;
+    right : 700px;
+    font-size: large;
 
 }
 
@@ -70,22 +89,43 @@ input {
 }
 
 button#yes-button {
+    background-color: whitesmoke ;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
     position : absolute;
-    bottom: 300px;
-    right : 950px;
-    width: 15%;
-    height: 15%;
-    font-size: 150%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+    bottom: 500px;
+    right : 900px;
+    width: 80px;
+    height: 80px;
+  
+  }
+  
 
 button#no-button {
-    position : absolute;
-    bottom: 300px;
-    right : 650px;
-    width: 15%;
-    height: 15%;
-    font-size: 150%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
+    background-color: whitesmoke ;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position : absolute;
+    bottom: 500px;
+    right : 790px;
+    width: 80px;
+    height: 80px;
+
+}
+button:hover {
+    background-color: rgb(146, 153, 164);
+    color: #FE9E16;
+  }
