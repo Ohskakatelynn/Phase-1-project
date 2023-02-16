@@ -50,31 +50,57 @@ function getDogs(dogs){
     let dogImg = document.createElement("img")
     dogImg.src = dog.image
     dogImg.className = "dog-image"
-    
-    dogImg.addEventListener("mouseover", () => {
-      alert("Give dog pets")
-    })
-    let breedName = document.createElement("p")
+    let breedName = document.createElement("h2")
     breedName.innerText = dog.breed
     dogDiv.append(imgAndBreed)
     imgAndBreed.append(breedName, dogImg)
-
     
-    breedName.addEventListener("click", () => {
+    dogImg.addEventListener("click", () => {
       const list = document.getElementById("ul")
       const itemsOnList = document.createElement("li")
+      itemsOnList.innerText = dog.description
+      // itemsOnList.innerText = dog["energy-level"]
+      // itemsOnList.innerText = dog.price
+      // itemsOnList.innerText = dog.friendly
+      // itemsOnList.innerText = dog.sheds
+      // itemsOnList.innerText = dog.sassy
       list.append(itemsOnList)
-      itemsOnList.innerText = dog["energy-level"]
-      itemsOnList.innerText = dog.price
-      itemsOnList.innerText = dog.friendly
-      itemsOnList.innerText = dog.sheds
-      itemsOnList.innerText = dog.sassy
-      breedName.append(list)
+      imgAndBreed.append(list)
+      
+      
+    
+    })
+   
+
+    
+    // breedName.addEventListener("click", () => {
+    //   const list = document.getElementById("ul")
+    //   const itemsOnList = document.createElement("li")
+    //   list.append(itemsOnList)
+    //   itemsOnList.innerText = dog["energy-level"]
+    //   itemsOnList.innerText = dog.price
+    //   itemsOnList.innerText = dog.friendly
+    //   itemsOnList.innerText = dog.sheds
+    //   itemsOnList.innerText = dog.sassy
+    //   breedName.append(list)
 
     })
-  })
-}
+  }
 
+  // function dogsDetails(dogs){
+  //   dogs.forEach(dog => {
+  //   const list = document.getElementById("ul")
+  //   const itemsOnList = document.createElement("li")
+  //   itemsOnList.innerText = dog["energy-level"]
+  //   itemsOnList.innerText = dog.price
+  //   itemsOnList.innerText = dog.friendly
+  //   itemsOnList.innerText = dog.sheds
+  //   itemsOnList.innerText = dog.sassy
+  //   list.append(itemsOnList)
+    
+    
+  //   })
+  // }
 
 function getBigDogs() {
   fetch("http://localhost:3000/dogs")

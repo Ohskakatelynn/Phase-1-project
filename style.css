@@ -1,13 +1,10 @@
-* {
-	text-align: center;
-	font-family: 'Roboto', sans-serif;
-}
- 
+*/
 body {
 	background-color: #F6F9FD;
 }
 
 h1{
+    text-align: center;
     font-size: 2.5em;
 }
 
@@ -15,22 +12,84 @@ h1{
 	background-color: #FE9E16;
 	color: #040404; 
 	height: 150px;
-	padding-top: 85px;
+	padding-top: 75px;
 	border-bottom: solid 0.25vh #E6E4E4;
 
 }
 
- 
  img.dog-image {
     display : block;
     height: 200px;
     width: 200px;
     border-radius : 50%;
-    float: left;
+    position:inline;
+    float :left;
     object-fit: scale-down;
     overflow: hidden;
 }
 
+h2 {
+    text-align: center;
+}
+
+
+div.big{
+    display: inline-block;
+    margin-left: 25%;
+    margin-right: auto;
+    position:relative;
+
+}
+
+div.not-big{
+    display: inline-block;
+    margin-left: 25%;
+    margin-right: auto;
+    position:relative;
+    /* display: inline-block;
+    position:relative;
+    width: 150px;
+    padding: 75px;
+    padding-top: 0px; */
+    
+}
+
 div#form-div {
     display: none;
+    position : absolute;
+    bottom: 300px;
+    right : 850px;
+
+}
+
+button {
+    cursor: pointer
+}
+
+input {
+    cursor: pointer;
+}
+
+button#yes-button {
+    position : absolute;
+    bottom: 300px;
+    right : 950px;
+    width: 15%;
+    height: 15%;
+    font-size: 150%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button#no-button {
+    position : absolute;
+    bottom: 300px;
+    right : 650px;
+    width: 15%;
+    height: 15%;
+    font-size: 150%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ul {
+    position:relative;
 }
