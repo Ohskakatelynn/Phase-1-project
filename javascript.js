@@ -34,13 +34,14 @@ questionForm.addEventListener("submit", (e) => {
     getBigDogs()
   } else if (e.target.choice.value == "no"){
     getNotBigDogs()
-  } 
-  formDiv.style.display= "none"
+  }   
 })
 
 function getDogs(dogs){
   dogs.forEach(dog => {
     let imgAndBreed = document.createElement("div");
+    let dogDetail = document.createElement("p");
+    dogDetail.innerHTML = dog.description;
     imgAndBreed.id = dog.id
     if(dog.size === 4){
       imgAndBreed.className = "big"
@@ -52,28 +53,20 @@ function getDogs(dogs){
     dogImg.className = "dog-image"
     
     dogImg.addEventListener("mouseover", () => {
-      alert("Give dog pets")
+      dogDiv.append(dogDetail)
+    })
+
+    dogImg.addEventListener("mouseout", () => {
+      dogDetail.remove()
     })
     let breedName = document.createElement("p")
     breedName.innerText = dog.breed
     dogDiv.append(imgAndBreed)
     imgAndBreed.append(breedName, dogImg)
 
-    
-    breedName.addEventListener("click", () => {
-      const list = document.getElementById("ul")
-      const itemsOnList = document.createElement("li")
-      list.append(itemsOnList)
-      itemsOnList.innerText = dog["energy-level"]
-      itemsOnList.innerText = dog.price
-      itemsOnList.innerText = dog.friendly
-      itemsOnList.innerText = dog.sheds
-      itemsOnList.innerText = dog.sassy
-      breedName.append(list)
-
     })
-  })
-}
+  }
+
 
 
 function getBigDogs() {

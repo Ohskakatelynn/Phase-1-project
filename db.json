@@ -9,6 +9,7 @@
       "sheds": "Shedding 5/5",
       "size": 4,
       "sassy": "Sassiness-5/5",
+      "description": "Huskies are highly energetic and intelligent, with a strong desire to run and explore. They are also known for their friendly and sociable nature, making them great family pets. However, their high energy level and strong prey drive can make them a challenging breed to train and handle without proper socialization and training.",
       "image": "https://breedadvisor.com/wp-content/uploads/2020/02/SIBERIAN-HUSKY-PORTRAIT.jpg"
     },
     {
@@ -20,6 +21,7 @@
       "sheds": "Shedding 4/5",
       "size": 4,
       "sassy": "Sassiness-5/5",
+      "description":"The German Shepherd is a breed of dog that originated in Germany and is known for their intelligence, loyalty, and versatility.They are medium to large-sized dogs with a muscular build and a distinctive wolf-like appearance.",
       "image": "https://th.bing.com/th/id/OIP.Bk2sCUiLRhGb77LfA90N2wHaEo?w=308&h=192&c=7&r=0&o=5&pid=1.7"
     },
     {
@@ -31,6 +33,7 @@
       "sheds": "Shedding 2/5",
       "size": 1,
       "sassy": "Sassiness-4/5",
+      "description":"They are known for their feisty and lively personalities, as well as their loyalty and affection towards their owners.They are suitable for apartment living and do not require a lot of exercise, but they do need socialization and training to prevent behavioral issues.",
       "image": "https://th.bing.com/th/id/OIP.VPXXLmDPafan_QCNVPGzKgAAAA?w=123&h=185&c=7&r=0&o=5&pid=1.7"
     },
     {
@@ -42,6 +45,7 @@
       "sheds": "Shedding 4/5",
       "size": 4,
       "sassy": "Sassiness-2/5",
+      "description": "Golden Retrievers were originally bred for hunting and retrieving game, but they have become a popular family pet due to their loyal and affectionate temperament. They are highly trainable and are often used as service dogs, therapy dogs, and search and rescue dogs.",
       "image": "https://th.bing.com/th/id/OIP.xwPljN7zAmSu2EMphHN-qgHaHa?w=188&h=188&c=7&r=0&o=5&pid=1.7"
     },
     {
@@ -53,6 +57,7 @@
       "sheds": "Shedding 3/5",
       "size": 3,
       "sassy": "Sassiness-2/5",
+      "description": "Bulldogs are known for their friendly and calm temperament, making them great family pets. They are also loyal and protective of their owners, but not overly energetic, which makes them suitable for apartment living.",
       "image": "https://th.bing.com/th/id/OIP.YF1VEGqBkK_hr-tC6e4sZwHaE7?w=270&h=180&c=7&r=0&o=5&pid=1.7"
     },
     {
@@ -64,6 +69,7 @@
       "sheds": "Shedding 1/5",
       "size": 4,
       "sassy": "Sassiness-2/5",
+      "description": "Poodles are highly intelligent and trainable, making them great companions for people of all ages. They are also hypoallergenic, which means they shed very little and are suitable for people with allergies.",
       "image": "https://th.bing.com/th/id/OIP.9XzH4IwmRssHhd_d3riVIQHaIk?w=150&h=180&c=7&r=0&o=5&pid=1.7"
     },
     {
@@ -75,6 +81,7 @@
       "sheds": "Shedding 3/5",
       "size": 3,
       "sassy": "Sassiness-3/5",
+      "description": "Beagles were originally bred for hunting and are still used for this purpose today, but they are also popular family pets due to their friendly and affectionate nature. They are highly social and do well with children and other pets.",
       "image": "https://th.bing.com/th/id/OIP.heldT27pSIEU23YkqPNhgwHaFW?w=215&h=180&c=7&r=0&o=5&pid=1.7"
     },
     {
@@ -86,6 +93,7 @@
       "sheds": "Shedding 3/5",
       "size": 1,
       "sassy": "Sassiness-4/5",
+      "description": "Dachshunds require regular exercise and mental stimulation, and they benefit from early socialization and training to ensure that they develop into well-behaved and well-adjusted dogs.",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSarHIuw9buAnlTqxJu-ew0ghZvIyVdpH1EUg&usqp=CAU"
     },
     {
@@ -97,6 +105,7 @@
       "sheds": "Shedding 3/5",
       "size": 1,
       "sassy": "Sassiness-4/5",
+      "description":"Pomeranians are lively and affectionate dogs that make great companions for people of all ages. They are highly intelligent and trainable, and they are often used as therapy dogs and in dog sports such as agility and obedience competitions.",
       "image": "https://cdn.fotofits.com/petzlover/gallery/img/l/pomeranian-620397.jpg"
     },
     {
@@ -108,6 +117,7 @@
       "sheds": "Shedding 3/5",
       "size": 3,
       "sassy": "Sassiness-4/5",
+      "description":"Shiba Inus are highly intelligent and have a strong prey drive, making them excellent hunters and watchdogs. They require regular exercise and mental stimulation to prevent boredom and behavioral issues.",
       "image": "https://th.bing.com/th/id/OIP.AsglPuvjcBxAoe-W8g9ZSgHaFj?w=252&h=189&c=7&r=0&o=5&pid=1.7"
     }
   ]
