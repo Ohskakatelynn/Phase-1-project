@@ -69,6 +69,7 @@ function getDogs(dogs){
 
     let breedName = document.createElement("h2")
     breedName.innerText = dog.breed
+    breedName.className = "breedTitle"
     dogDiv.append(imgAndBreed)
     imgAndBreed.append(breedName, dogImg)
     })

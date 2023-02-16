@@ -14,8 +14,6 @@ h1{
     
 }
 
-
-
 #title{
 	background-color: #FE9E16;
 	color: #040404; 
@@ -27,6 +25,10 @@ h1{
 
 }
 
+h2.breedTitle {
+
+    text-align: center;
+}
  img.dog-image {
     display : block;
     height: 200px;
